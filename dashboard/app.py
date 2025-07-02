@@ -15,7 +15,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.pollution_predictor import predict_pollution, classify_pollution_level
 
 # Load data
-DATA_PATH = "data/merged_pollution_data.csv"
+DATA_PATH = os.path.join(os.path.dirname(__file__), "merged_data.csv")
 df = pd.read_csv(DATA_PATH)
 df['date'] = pd.to_datetime(df['date'])
 
